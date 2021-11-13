@@ -79,9 +79,10 @@ p {
   border-radius: 15px;
 }
 
-.about-paragraph {
-  display: flex;
-  margin: 0 10px;
+.about-paragraph p {
+  display: block;
+  margin: 30px auto;
+  padding: 0px;
   text-align: center;
 }
 
@@ -104,8 +105,72 @@ p {
   color: var(--primary-color);
   font-size: 28px;
   text-decoration: none;
+  margin-bottom: 30px;
 }
 
 .email-link:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .introduction-header {
+    margin: 20px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  h1 {
+    font-size: 60px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 15px;
+  }
+
+  .yoga-header,
+  .weather-header,
+  .yogurt-header,
+  p {
+    display: block;
+    margin: 0px auto;
+    text-align: center;
+    max-width: 100%;
+  }
+  .yoga-app-link,
+  .weather-app-link,
+  .yogurt-app-link {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 180px;
+  }
+  .about-paragraph p {
+    margin: 15px;
+  }
+  .about-yoga-image,
+  .about-weather-image,
+  .about-yogurt-image {
+    margin: 20px;
+  }
+
+  @media (max-width: 576px) {
+    .yoga-app-image,
+    .weather-app-image,
+    .yogurt-app-image {
+      display: none;
+    }
+    .yogurt-header,
+    .yogurt-app-link,
+    .yogurt-paragraph {
+      position: relative;
+      bottom: 50px;
+    }
+    .about-yoga-image,
+    .about-weather-image,
+    .about-yogurt-image {
+      max-width: 300px;
+    }
+  }
 }
